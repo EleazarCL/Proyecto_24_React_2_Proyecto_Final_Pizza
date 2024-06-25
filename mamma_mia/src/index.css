@@ -19,6 +19,7 @@ li {
   align-items: center;
   height: 4rem;
 }
+
 .logo-nombre{
   color: #fff;
   font-weight: bold;
@@ -28,6 +29,13 @@ li {
 .logo-nombre:hover{
   color: rgb(207, 207, 207);
 }
+.logo-pizza{
+  margin-left: 2rem;
+}
+.logo-carrito{
+  margin-right: 2rem;
+}
+/*Zona Header*/
 .header {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("./assets/Header.jpg");
@@ -54,14 +62,189 @@ h6 {
 h4{
   font-size: 1.5rem;
 }
-.container-cards{
+/*Zona Cards*/
+.container-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(33.33%, 1fr));
-  grid-gap: 20px; /* Espacio entre cards */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
 }
-.container-card{
-  width: 33.3333333333%;
+.col {
+  flex: 1;
+  padding: 15px;
 }
-.card  img{
-  height: 11vh;
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.custom-card-img-top {
+  width: 100%;
+  height: auto;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 1.5em;
+  text-transform: capitalize;
+}
+
+.card-text {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.text-center {
+  text-align: center;
+  color: #333;
+  padding-bottom: 15px;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 15px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.btn-info {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+/*Zona Piza Detail*/
+
+.container {
+  margin-top: 2rem;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  max-width: 80vw;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-img{
+  flex: 1;
+  padding: 10px;
+}
+.col-body{
+  max-width: 40vw;
+}
+
+.col-img {
+  max-width: 50%;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px 0 0 8px;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 1.5em;
+  text-transform: capitalize;
+}
+
+.card-text {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 10px;
+}
+
+/*Zona Carrito*/
+
+.btn-pagar{
+  background-color: #28a745;
+  color: white;
+}
+.btn-rest {
+  background-color: #dc3545;
+  color: white;
+}
+.btn-sum{
+  background-color: #17a2b8;
+  color: white;
+}
+.supra-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+.container-general{
+  width: 70vw;
+}
+.container-items{
+  display: flex;
+  flex-direction: column;
+}
+.items{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0.5rem;
+}
+.items img{
+  height: 6rem;
+}
+.sub-items-img-name{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.sub-items-price-bottom{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }

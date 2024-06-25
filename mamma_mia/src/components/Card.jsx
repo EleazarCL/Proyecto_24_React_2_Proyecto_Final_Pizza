@@ -10,29 +10,33 @@ function Card() {
     return (
         <>
             {pizzas.map((pizza) => (
-                <div key={pizza.id}>
+                <div key={pizza.id} className="col">
                     <div className="card">
-                        <img src={pizza.img} alt="" />
+                        <img src={pizza.img} alt="imagen pizza" className="custom-card-img-top" />
                         <div className="card-body">
                             <h4 className="card-title">Pizza {pizza.name}</h4>
                             <hr />
-                            <p className="card-text"><b>Ingredientes:</b></p>
+                            <p className="card-text">
+                                <b>Ingredientes:</b>
+                            </p>
+
                             <ul>
                                 {pizza.ingredients.map((ingredient, i) => (
                                     <li key={i}>&#127829; {ingredient}</li>
                                 ))}
                             </ul>
                         </div>
-                        <h2>Precio: ${formatoNumero(pizza.price)}</h2>
-                        <div className="">
+
+                        <h2 className="text-center">Precio: ${formatoNumero(pizza.price)}</h2>
+                        <div className="btn-group">
                             <button
-                                className="btn"
+                                className="btn btn-info"
                                 onClick={() => navigate(`/pizzas/${pizza.id}`)}
                             >
                                 Ver Más &#128064;
                             </button>
                             <button
-                                className="btn"
+                                className="btn btn-danger"
                                 onClick={() => addToCart(pizza)}
                             >
                                 Añadir &#128722;

@@ -9,11 +9,9 @@ function Navbar() {
 
     return (
         <nav className="navbar">
-            <div className="div-links">
-                <Link className="logo-nombre" to="/">&#127829; Pizzería Mamma Mia!</Link>
-                <Link className="logo-nombre" to="/carrito">&#128722; ${total.toFixed(2)}
+                <Link className="logo-nombre logo-pizza" to="/">&#127829; Pizzería Mamma Mia!</Link>
+                <Link className="logo-nombre logo-carrito" to="/carrito">&#128722; ${total}
                 </Link>
-            </div>
         </nav>
     );
 }
