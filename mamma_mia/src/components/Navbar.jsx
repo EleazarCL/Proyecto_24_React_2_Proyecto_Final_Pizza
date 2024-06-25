@@ -1,17 +1,21 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { PizzasContext } from "../context/PizzaProvider";
 
 function Navbar() {
-    return (
-        <>
-            <div className="navbar">
-                    <div className="container-links">
-                        <Link to="/" className="logo-nombre">
-                            <h4 className="mb-0">&#127829; Pizzería Mamma Mia!</h4>
-                        </Link>
+    const { carrito } = useContext(PizzasContext);
 
-                    </div>
+    const total = carrito.reduce((sum, item) => sum + item.price * item.quantity, 0);
+
+    return (
+        <nav className="navbar">
+            <div className="div-links">
+                <Link className="logo-nombre" to="/">&#127829; Pizzería Mamma Mia!</Link>
+                <Link className="logo-nombre" to="/carrito">&#128722; ${total.toFixed(2)}
+                </Link>
             </div>
-        </>
-    )
+        </nav>
+    );
 }
+
 export default Navbar;
